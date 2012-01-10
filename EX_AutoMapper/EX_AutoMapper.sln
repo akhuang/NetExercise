@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EX_AutoMapper", "EX_AutoMapper\EX_AutoMapper.csproj", "{5E1BD0A9-411F-4081-8F20-D3F4CB609515}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{3379BDA9-CBFD-4E37-ACAD-380451167CC7}"
+	ProjectSection(SolutionItems) = preProject
+		EX_AutoMapper\AutoMapper.dll = EX_AutoMapper\AutoMapper.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{BCCF2F9C-B2E5-4FC2-85AE-48C28823E240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E1BD0A9-411F-4081-8F20-D3F4CB609515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1BD0A9-411F-4081-8F20-D3F4CB609515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1BD0A9-411F-4081-8F20-D3F4CB609515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1BD0A9-411F-4081-8F20-D3F4CB609515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCF2F9C-B2E5-4FC2-85AE-48C28823E240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCF2F9C-B2E5-4FC2-85AE-48C28823E240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCF2F9C-B2E5-4FC2-85AE-48C28823E240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCF2F9C-B2E5-4FC2-85AE-48C28823E240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
