@@ -1,0 +1,8 @@
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\BackgroundWorker_Ex02.Properties.Resources.resources
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\bin\Debug\BackgroundWorker_Ex02.exe
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\bin\Debug\BackgroundWorker_Ex02.pdb
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\BackgroundWorker_Ex02.exe
+E:\Net\CSharp\BackgroundWorker_Ex02\BackgroundWorker_Ex02\obj\x86\Debug\BackgroundWorker_Ex02.pdb
