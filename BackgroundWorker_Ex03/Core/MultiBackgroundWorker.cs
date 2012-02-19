@@ -135,13 +135,36 @@ namespace Core
             }
         }
 
-        public void ReportProgress(AsyncOperation async, int percentage, object userState)
+        public void ReportProgress(object taskId, int percentage, object userState)
         {
+            AsyncOperation async = GetAysncOperation(taskId);
             if (async != null)
             {
                 MultiProgressChangedEventArgs e = new MultiProgressChangedEventArgs(async.UserSuppliedState, percentage, userState);
                 async.Post(onProgressChangedDelegate, e);
             }
+        }
+
+        public void CancelAsync(object taskId)
+        {
+            AsyncOperation async = GetAysncOperation(taskId);
+
+            if (async != null)
+            {
+                lock (userStateToLifeTime.SyncRoot)
+                {
+                    userStateToLifeTime.Remove(taskId);
+                }
+            }
+        }
+        private AsyncOperation GetAysncOperation(object taskId)
+        {
+            return userStateToLifeTime[taskId] as AsyncOperation;
+        }
+
+        public bool WhetherTaskCancelledOrNot(object taskId)
+        {
+            return userStateToLifeTime[taskId] == null;
         }
     }
 }

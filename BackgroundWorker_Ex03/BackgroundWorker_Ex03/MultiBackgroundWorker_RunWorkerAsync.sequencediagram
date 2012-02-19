@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="217cefaa-b02f-49e0-bb71-9022f7282dce" name="MultiBackgroundWorker_RunWorkerAsync" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="79b827ff-a6e2-4e3c-ba5f-37c9d3bb8adf" name="MultiBackgroundWorker_RunWorkerAsync" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="038603bf-e6ca-469d-8cf2-962dfed328cb" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="eb4e5303-885f-452d-8eea-c19ffbbb264d" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="e656b0b8-78b3-49b1-b0b6-70083123d0ee" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="4b23fd34-10a9-4c61-b995-771e302dd2c0" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="33702ae2-494a-491b-802b-be23a7b3a0e0" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="09cfe871-5afa-4a86-bd4d-4ebbe088d79f" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="7b0c9a90-b589-465d-ae60-5bf9b11438c7" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="34ee2200-eacf-4643-a175-6e05de81056b" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="911e14c8-2cde-4ca4-9fc9-6ba7121f1fa9" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="4020f03e-28c0-480f-b3b7-32dace82800b" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="a48f6d58-ce6d-4d09-b9a2-8d721945017d" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="e656b0b8-78b3-49b1-b0b6-70083123d0ee" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d6b135e2-d766-4ab6-80e0-3030d218c149" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4b23fd34-10a9-4c61-b995-771e302dd2c0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="f367ca1b-841a-4315-a965-f85422d9de66" name="LostFoundTarget" />
+          <combinedFragment Id="d8de48c8-1931-4801-a25c-6489e98a6b40" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="Lock">
+            <coveredLifelines>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="4c60c6f0-a92c-4f31-a5fe-f6089908a7d9" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment Id="4ff04969-d0b3-431d-9bd0-011efd73ad9f" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
+                    <coveredLifelines>
+                      <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand Id="e434667c-b175-471c-9ab5-2ea9b009ba71" name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint Id="834ba061-945e-4dd3-89a5-9818b7078373" guardText="if (this.userStateToLifeTime.Contains(async.UserSuppliedState))" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker Id="09cfe871-5afa-4a86-bd4d-4ebbe088d79f" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="34ee2200-eacf-4643-a175-6e05de81056b" LastKnownName="OperandOccurrenceSpecification" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint Id="2cc584da-0391-489e-8482-3f9ff6b33824" guardText="lock (this.userStateToLifeTime.SyncRoot)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="33702ae2-494a-491b-802b-be23a7b3a0e0" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="911e14c8-2cde-4ca4-9fc9-6ba7121f1fa9" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="33702ae2-494a-491b-802b-be23a7b3a0e0" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="09cfe871-5afa-4a86-bd4d-4ebbe088d79f" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <lostFoundTarget Id="179d6471-86d2-4e90-a0d7-6d464587e7d5" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="7b0c9a90-b589-465d-ae60-5bf9b11438c7" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="34ee2200-eacf-4643-a175-6e05de81056b" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="911e14c8-2cde-4ca4-9fc9-6ba7121f1fa9" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="ed930f2c-160e-47cc-881d-047b9b97a9b8" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="2d34e869-4822-430f-922d-ea4e59322312" LastKnownName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="e4bff33b-7867-4316-8fa1-418e18c291de" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="2771377b-805f-46e1-9408-dd0b36e1aeb5" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="1f5d94ed-3d9c-4be1-9430-24f99efcd9e2" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1d271833-fa0e-44e8-8e9a-3172e74893ef" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="2771377b-805f-46e1-9408-dd0b36e1aeb5" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8c53cf8a-edf4-438a-b765-483de78fa2c7" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2d34e869-4822-430f-922d-ea4e59322312" LastKnownName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4020f03e-28c0-480f-b3b7-32dace82800b" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1f5d94ed-3d9c-4be1-9430-24f99efcd9e2" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2d34e869-4822-430f-922d-ea4e59322312" LastKnownName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1d271833-fa0e-44e8-8e9a-3172e74893ef" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2d34e869-4822-430f-922d-ea4e59322312" LastKnownName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="a48f6d58-ce6d-4d09-b9a2-8d721945017d" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="e4bff33b-7867-4316-8fa1-418e18c291de" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8e6e26cd-4bfd-4fa0-9751-86f1a5d65201" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2d34e869-4822-430f-922d-ea4e59322312" LastKnownName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="eb4e5303-885f-452d-8eea-c19ffbbb264d" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2e7f430f-2f9e-4ef5-a53f-88b6e526fe41" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" LastKnownName="this : MultiBackgroundWorker" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="373685f9-7bbf-4b9d-8cfe-6c6152abbb57" name="this : MultiBackgroundWorker" isActor="false" lifelineDisplayName="this : MultiBackgroundWorker" referencedInstance="(Assembly=$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri) Namespace=Core Type=MultiBackgroundWorker ObjectInstance=&quot;Object instance 3&quot;)" referencedType="Core.MultiBackgroundWorker">
+            <referencesInternal>
+              <reference Id="d2a757b7-3562-489f-9477-2631e6b24fa4" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Core)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=MultiBackgroundWorker)&quot;)" tag="DGQL" />
+              <reference Id="9abb9b9b-275c-4939-9d3f-ea332c81abf8" handle="(Assembly=&quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&quot; Namespace=Core Type=MultiBackgroundWorker)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="e656b0b8-78b3-49b1-b0b6-70083123d0ee" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="eb4e5303-885f-452d-8eea-c19ffbbb264d" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="2d34e869-4822-430f-922d-ea4e59322312" name="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" isActor="false" lifelineDisplayName="this.threadStartDelegate : MultiBackgroundWorker.WorkerThreadStartDelete" referencedInstance="(Assembly=$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri) Namespace=Core Type=MultiBackgroundWorker Member=threadStartDelegate ObjectInstance=&quot;Object instance 12&quot;)" referencedType="Core.MultiBackgroundWorker.WorkerThreadStartDelete">
+            <referencesInternal>
+              <reference Id="64052d60-8358-4264-800e-5f723e3c9ebc" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Core)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=MultiBackgroundWorker)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=(Name=WorkerThreadStartDelete ParentType=MultiBackgroundWorker))&quot;)" tag="DGQL" />
+              <reference Id="0c18529d-7c5f-48c4-87d8-131f85b135de" handle="(Assembly=&quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&quot; Namespace=Core Type=(Name=WorkerThreadStartDelete ParentType=MultiBackgroundWorker))" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="2771377b-805f-46e1-9408-dd0b36e1aeb5" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="e4bff33b-7867-4316-8fa1-418e18c291de" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="bd20a196-efe6-4c19-82ec-e02dd7eb0531" name="RunWorkerAsync" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="3b009694-cff7-40d0-a6dc-1190928c461b" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Core)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=MultiBackgroundWorker)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=MultiBackgroundWorker Member=(Name=RunWorkerAsync OverloadingParameters=[(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=Object),(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=Object)]))&quot;)" tag="DGQL" />
+              <reference Id="20d46f9f-22c2-41e2-a582-ff6a088ae5c1" handle="(Assembly=&quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&quot; Namespace=Core Type=MultiBackgroundWorker Member=(Name=RunWorkerAsync OverloadingParameters=[(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=Object)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="f367ca1b-841a-4315-a965-f85422d9de66" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="4b23fd34-10a9-4c61-b995-771e302dd2c0" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="62536f00-4575-44f1-931d-4c5d95640792" name="Throw" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false" signatureText="throw new Exception(&quot;The task id must be unique.&quot;)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="7b0c9a90-b589-465d-ae60-5bf9b11438c7" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="179d6471-86d2-4e90-a0d7-6d464587e7d5" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="dd0330d1-cc93-4902-814e-9fd1b1aeeb52" name="BeginInvoke" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="threadStartDelegate.BeginInvoke(async, argument, null, null)">
+            <referencesInternal>
+              <reference Id="8a716dc3-eb78-4f81-83d8-acb9ca01ae4d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Core)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=MultiBackgroundWorker)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=(Name=WorkerThreadStartDelete ParentType=MultiBackgroundWorker))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&amp;quot; Namespace=Core Type=(Name=WorkerThreadStartDelete ParentType=MultiBackgroundWorker) Member=(Name=BeginInvoke OverloadingParameters=[(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/System.dll&amp;quot; Namespace=System.ComponentModel Type=AsyncOperation),(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=Object),(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=AsyncCallback),(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=Object)]))&quot;)" tag="DGQL" />
+              <reference Id="37cc5bdc-2ade-46da-8d1d-385e1ab03c38" handle="(Assembly=&quot;$(b246327c-bfbf-4b33-a997-d2aaa6344768.OutputPathUri)&quot; Namespace=Core Type=(Name=WorkerThreadStartDelete ParentType=MultiBackgroundWorker) Member=(Name=BeginInvoke OverloadingParameters=[(Assembly=&quot;$(FxRootUri)/v2.0.50727/System.dll&quot; Namespace=System.ComponentModel Type=AsyncOperation),(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=AsyncCallback),(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=Object)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="4020f03e-28c0-480f-b3b7-32dace82800b" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="1f5d94ed-3d9c-4be1-9430-24f99efcd9e2" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="0a76c044-243e-4254-ae96-25415fad3036" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1d271833-fa0e-44e8-8e9a-3172e74893ef" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="a48f6d58-ce6d-4d09-b9a2-8d721945017d" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="d6b135e2-d766-4ab6-80e0-3030d218c149" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="2e7f430f-2f9e-4ef5-a53f-88b6e526fe41" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8c53cf8a-edf4-438a-b765-483de78fa2c7" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8e6e26cd-4bfd-4fa0-9751-86f1a5d65201" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

@@ -5,18 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using AD101CNET.FileData;
 using Core;
 using System.Threading;
-using System.Globalization;
 
 namespace BackgroundWorker_Ex03
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        FileDataCollection listData = new FileDataCollection();
+        public Form2()
         {
             InitializeComponent();
-
             InitializeMultiDelegate();
         }
 
@@ -26,6 +26,11 @@ namespace BackgroundWorker_Ex03
             multiBackgroundWorker1.ProgressChanged += new Core.MultiProgressChangedEventHandler(multiBackgroundWorker1_ProgressChanged);
             multiBackgroundWorker1.RunWorkerCompleted += new Core.MultiRunWorkerCompletedEventHandler(multiBackgroundWorker1_RunWorkerCompleted);
 
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = listData;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -41,14 +46,13 @@ namespace BackgroundWorker_Ex03
 
         private void AddToListView(string taskId)
         {
-            ListViewItem lvi = new ListViewItem();
-            lvi.Text = taskId.ToString();
-            lvi.SubItems.Add("Not started");
-            lvi.SubItems.Add("--");
-            lvi.SubItems.Add("--");
-            lvi.Tag = taskId;
+            FileData data = new FileData();
+            data.TaskId = taskId;
+            //data.ProgressPercentage;
+            data.ThreadId = "--";
+            data.Result = "--";
+            listData.Add(data);
 
-            listView1.Items.Add(lvi);
         }
 
         void multiBackgroundWorker1_DoWork(object sender, Core.MultiDoWorkEventArgs e)
@@ -86,19 +90,28 @@ namespace BackgroundWorker_Ex03
 
         private void UpdateListView(string taskId, int progressPercentage, object threadId)
         {
-            listView1.BeginUpdate();
-            foreach (ListViewItem lvi in listView1.Items)
-            {
-                if (lvi.Tag != null && lvi.Tag.ToString() == taskId)
-                {
-                    lvi.SubItems[1].Text = progressPercentage.ToString(CultureInfo.CurrentCulture.NumberFormat) + "%";
-                    lvi.SubItems[2].Text = threadId.ToString();
+            //listView1.BeginUpdate();
+            //foreach (ListViewItem lvi in listView1.Items)
+            //{
+            //    if (lvi.Tag != null && lvi.Tag.ToString() == taskId)
+            //    {
+            //        lvi.SubItems[1].Text = progressPercentage.ToString(CultureInfo.CurrentCulture.NumberFormat) + "%";
+            //        lvi.SubItems[2].Text = threadId.ToString();
 
+            //        break;
+            //    }
+            //}
+            //listView1.EndUpdate();
+
+            foreach (FileData item in listData)
+            {
+                if (item.TaskId == taskId)
+                {
+                    item.ProgressPercentage = progressPercentage;
+                    item.ThreadId = threadId.ToString();
                     break;
                 }
             }
-            listView1.EndUpdate();
-
         }
 
 
@@ -112,38 +125,38 @@ namespace BackgroundWorker_Ex03
             ListViewItem lvi = null;
             if (e.Error != null)
             {
-                lvi = UpdateListView(taskId, "Error");
+                UpdateListView(taskId, "Error");
             }
             else if (e.Cancelled)
             {
-                lvi = UpdateListView(taskId, "Cancelled");
+                UpdateListView(taskId, "Cancelled");
             }
             else
             {
-                lvi = UpdateListView(taskId, e.Result.ToString());
+                UpdateListView(taskId, e.Result.ToString());
             }
-            lvi.Tag = null;
+
         }
 
-        private ListViewItem UpdateListView(string taskId, string result)
+        private void UpdateListView(string taskId, string result)
         {
-            listView1.BeginUpdate();
-            ListViewItem lvi = null;
-            foreach (ListViewItem item in this.listView1.Items)
-            {
-                if (item.Tag != null && item.Tag.ToString() == taskId)
-                {
-                    item.SubItems[3].Text = result;
+            //listView1.BeginUpdate();
+            //ListViewItem lvi = null;
+            //foreach (ListViewItem item in this.listView1.Items)
+            //{
+            //    if (item.Tag != null && item.Tag.ToString() == taskId)
+            //    {
+            //        item.SubItems[3].Text = result;
 
-                    lvi = item;
-                    break;
-                }
-            }
+            //        lvi = item;
+            //        break;
+            //    }
+            //}
 
 
-            listView1.EndUpdate();
+            //listView1.EndUpdate();
 
-            return lvi;
+            //return lvi;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -153,14 +166,14 @@ namespace BackgroundWorker_Ex03
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
-            {
-                if (item != null && item.Tag != null)
-                {
-                    multiBackgroundWorker1.CancelAsync(item.Tag);
-                }
-                item.Selected = false;
-            }
+            //foreach (ListViewItem item in listView1.SelectedItems)
+            //{
+            //    if (item != null && item.Tag != null)
+            //    {
+            //        multiBackgroundWorker1.CancelAsync(item.Tag);
+            //    }
+            //    item.Selected = false;
+            //}
         }
 
 
