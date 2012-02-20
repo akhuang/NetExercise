@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using AD101CNET.FileData;
 using Core;
 using System.Threading;
+using System.Diagnostics;
 
 namespace BackgroundWorker_Ex03
 {
@@ -48,6 +49,7 @@ namespace BackgroundWorker_Ex03
         {
             FileData data = new FileData();
             data.TaskId = taskId;
+            data.Tag = taskId;
             //data.ProgressPercentage;
             data.ThreadId = "--";
             data.Result = "--";
@@ -60,6 +62,11 @@ namespace BackgroundWorker_Ex03
             //e.ta
             string taskId = e.TaskID.ToString();
             e.Result = Compute(taskId, (MultiBackgroundWorker)sender, e);
+        }
+
+        void multiBackgroundWorker1_ProgressChanged(object sender, Core.MultiProgressChangedEventArgs e)
+        {
+            UpdateListView((string)e.TaskID, e.ProgressPercentage, e.UserState);
         }
 
         private object Compute(string taskId, MultiBackgroundWorker multiBackgroundWorker, MultiDoWorkEventArgs e)
@@ -75,7 +82,7 @@ namespace BackgroundWorker_Ex03
                     break;
                 }
                 result += i;
-                Thread.Sleep(100);
+                Thread.Sleep(500);
                 int progressPercentage = (int)((float)i / (float)n * 100);
                 multiBackgroundWorker.ReportProgress(taskId, progressPercentage, Thread.CurrentThread.ManagedThreadId);
             }
@@ -83,10 +90,7 @@ namespace BackgroundWorker_Ex03
             return result;
         }
 
-        void multiBackgroundWorker1_ProgressChanged(object sender, Core.MultiProgressChangedEventArgs e)
-        {
-            UpdateListView((string)e.TaskID, e.ProgressPercentage, e.UserState);
-        }
+
 
         private void UpdateListView(string taskId, int progressPercentage, object threadId)
         {
@@ -105,7 +109,7 @@ namespace BackgroundWorker_Ex03
 
             foreach (FileData item in listData)
             {
-                if (item.TaskId == taskId)
+                if (item.Tag != null && item.Tag == taskId)
                 {
                     item.ProgressPercentage = progressPercentage;
                     item.ThreadId = threadId.ToString();
@@ -121,24 +125,26 @@ namespace BackgroundWorker_Ex03
             //1.判断是否出现错误
             //2.判断是否被取消
             //3.已成功.
+            FileData model = null;
             string taskId = e.TaskId.ToString();
-            ListViewItem lvi = null;
             if (e.Error != null)
             {
-                UpdateListView(taskId, "Error");
+                model = UpdateListView(taskId, "Error");
             }
             else if (e.Cancelled)
             {
-                UpdateListView(taskId, "Cancelled");
+                model = UpdateListView(taskId, "Cancelled");
             }
             else
             {
-                UpdateListView(taskId, e.Result.ToString());
+                model = UpdateListView(taskId, e.Result.ToString());
             }
-
+            Debug.WriteLine(model == null);
+            if (model != null)
+                model.Tag = null;
         }
 
-        private void UpdateListView(string taskId, string result)
+        private FileData UpdateListView(string taskId, string result)
         {
             //listView1.BeginUpdate();
             //ListViewItem lvi = null;
@@ -157,6 +163,20 @@ namespace BackgroundWorker_Ex03
             //listView1.EndUpdate();
 
             //return lvi;
+
+            FileData model = null;
+            for (int i = 0; i < listData.Count; i++)
+            {
+                FileData item = listData[i];
+                if (item.Tag != null && item.Tag == taskId)
+                {
+                    item.Result = result;
+                    model = item;
+                    break;
+                }
+            }
+
+            return model;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,7 +194,28 @@ namespace BackgroundWorker_Ex03
             //    }
             //    item.Selected = false;
             //}
+            foreach (DataGridViewRow dgv in dataGridView1.SelectedRows)
+            {
+                string taskId = dgv.Cells[4].Value.ToString();
+                if (!string.IsNullOrEmpty(taskId))
+                {
+                    multiBackgroundWorker1.CancelAsync(taskId);
+                }
+
+                //for (int i = 0; i < listData.Count; i++)
+                //{
+                //    FileData item = listData[i];
+                //    if (item != null && item.Tag == taskId)
+                //    {
+                //        item.Tag = null;
+                //        break;
+                //    }
+                //}
+
+            }
         }
+
+
 
 
 

@@ -32,7 +32,28 @@ namespace AD101CNET.FileData
             }
         }
         public string ThreadId { get; set; }
-        public string Result { get; set; }
+        private string _result;
+        public string Result
+        {
+            get
+            {
+                return _result;
+            }
+            set
+            {
+                if (value != _result)
+                {
+                    this._result = value;
+                    NotifyPropertyChanged("Result");
+                }
+            }
+        }
+
+        public string Tag
+        {
+            get;
+            set;
+        }
 
         private void OnRainseStatusChanged(object obj)
         {
