@@ -10,15 +10,7 @@ namespace IOC_Ex01
         static void Main(string[] args)
         {
             Console.WriteLine("direct invoke...");
-            IGenerator generator = new PdfGenerator();
-            generator.Generate();
-
-            generator = new ExcelGenerator();
-            generator.Generate();
-
-            Console.WriteLine("----------------------------------------");
-
-            Console.WriteLine("use factory...");
+        
 
             new Container();
             GeneratorManager manager = (GeneratorManager)Container.GetBean("manager");

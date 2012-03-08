@@ -27,6 +27,7 @@ namespace IOC_Ex01
                     break;
             }
         }
+
         public GeneratorManager(IGenerator generator)
         {
             this.generator = generator;
@@ -37,7 +38,6 @@ namespace IOC_Ex01
             Console.WriteLine("Manager do sth...");
             generator.Generate();
         }
-
     }
 
     public enum GeneratorType
