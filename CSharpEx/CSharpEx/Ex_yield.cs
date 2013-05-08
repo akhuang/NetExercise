@@ -21,7 +21,23 @@ namespace CSharpEx
                 yield return item;
             }
         }
+    }
 
+    public class SampleCollection
+    {
+        public int[] items;
 
+        public SampleCollection()
+        {
+            items = new int[5] { 5, 4, 7, 9, 3 };
+        }
+
+        public IEnumerable BuildCollection()
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                yield return items[i];
+            }
+        }
     }
 }
