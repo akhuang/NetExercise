@@ -31,8 +31,15 @@ namespace CSharpEx
             var constructor = targetType.GetConstructor(new Type[] { componentType });
             var newExpression = Expression.New(constructor, argumentExpression);
 
-
             Ex_Func.WriteToTarget();
+
+            string plainText = "phoenix";
+            Console.WriteLine("plain text:" + plainText);
+            string encryTxt = plainText.Encrypt();
+            Console.WriteLine("encryption:" + encryTxt);
+            Console.WriteLine("decrypt:" + encryTxt.Decrypt());
+
+            Ex_ObjectGc.TestGc();
 
             Console.ReadKey();
         }
