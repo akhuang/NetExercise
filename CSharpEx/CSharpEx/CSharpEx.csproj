@@ -46,6 +46,7 @@
     <Compile Include="Ex_Encryption.cs" />
     <Compile Include="Ex_Func.cs" />
     <Compile Include="Ex_ObjectGc.cs" />
+    <Compile Include="Ex_Task.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ex_yield.cs" />
