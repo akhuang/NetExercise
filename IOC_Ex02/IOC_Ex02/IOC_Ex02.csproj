@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D8305C31-23B1-4181-9F54-740ACA9F5D1B}</ProjectGuid>
+    <ProjectGuid>{A4CA6007-CC55-4D99-9293-EA6DD82483B3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpEx</RootNamespace>
-    <AssemblyName>CSharpEx</AssemblyName>
+    <RootNamespace>IOC_Ex02</RootNamespace>
+    <AssemblyName>IOC_Ex02</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,16 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ex_Encryption.cs" />
-    <Compile Include="Ex_Func.cs" />
-    <Compile Include="Ex_ObjectGc.cs" />
-    <Compile Include="Ex_Sort.cs" />
-    <Compile Include="Ex_Task.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ex_yield.cs" />
-    <Compile Include="StringExtension.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="RolesServices.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

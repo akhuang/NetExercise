@@ -42,6 +42,7 @@ namespace CSharpEx
             Ex_ObjectGc.TestGc();
 
             Ex_Sort.SortList();
+            Ex_Task.Run();
 
             Console.ReadKey();
         }
