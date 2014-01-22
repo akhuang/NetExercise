@@ -44,6 +44,9 @@ namespace UnsafeCodeAndPointers
             Console.WriteLine("value of (int)theChar:", theChar);
 
             AddressOfOperator.Run();
+
+            AccessMembers.Run();
+
             Console.ReadKey();
         }
     }
