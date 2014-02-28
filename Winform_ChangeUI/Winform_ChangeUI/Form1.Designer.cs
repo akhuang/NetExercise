@@ -54,7 +54,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listLog;
+        public System.Windows.Forms.ListBox listLog;
+
+
+
+
     }
 }
 

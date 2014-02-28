@@ -18,7 +18,9 @@ namespace Winform_ChangeUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listLog.Items.Add("Kkj");
+            listLog.Items.Add("log in main form");
+
+            Utils.AddLog(this);
         }
     }
 }
