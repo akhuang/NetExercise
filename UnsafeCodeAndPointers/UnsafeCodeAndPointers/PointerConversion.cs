@@ -39,6 +39,10 @@ namespace UnsafeCodeAndPointers
                 //  00
                 //  00
             }
+
+            sbyte dtmf = 66;
+            char dc = (char)dtmf;
+            Console.WriteLine(dc);
         }
     }
 }
